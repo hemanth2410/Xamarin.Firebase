@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <!-- UI Strings -->
+  <string name="SignIn">Sign In</string>
+  <string name="SignOut">Sign Out</string>
+  <string name="RevokeAccess">Revoke Access</string>
+  <string name="SubscribeToNews">Subscribe To News</string>
+  <string name="LogToken">Log Token</string>
+	<string name="google_app_id">1:1045837793898:android:a06be197fd59a1591c5813</string>
+	<string name="gcm_defaultSenderId">1045837793898</string>
+</resources>

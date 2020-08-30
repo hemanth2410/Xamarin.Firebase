@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1045837793898",
+    "firebase_url": "https://alicemessenger-5efbb.firebaseio.com",
+    "project_id": "alicemessenger-5efbb",
+    "storage_bucket": "alicemessenger-5efbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045837793898:android:a06be197fd59a1591c5813",
+        "android_client_info": {
+          "package_name": "com.thoughts.alice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045837793898-u9gthou43ehlkjq0ds7s0d2igno7jc3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thoughts.alice",
+            "certificate_hash": "196aa31520f768847c715df0645aaf949121ffeb"
+          }
+        },
+        {
+          "client_id": "1045837793898-p8p1485urnunq6s6nj16ilnkfh265585.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ58xqxKOQXjFj0J5u7cJSSezSqQ2LgBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045837793898-p8p1485urnunq6s6nj16ilnkfh265585.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
