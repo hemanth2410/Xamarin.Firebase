@@ -1,6 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Alice.Services;
 using Alice.ViewModels;
+using FFImageLoading.Forms;
+using Unity.Injection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,6 +12,7 @@ namespace Alice.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ChatPage : ContentPage
     {
+        public static string TargetURL;
         public ChatPage()
         {
             var viewModel = ViewModelLocator.Instance.Resolve(typeof(ChatVM));
@@ -53,6 +57,20 @@ namespace Alice.Pages
         {
             var v = ChatList.ItemsSource.Cast<object>().LastOrDefault();
             ChatList.ScrollTo(v, ScrollToPosition.End, true);
+        }
+
+        private void OnChatImageTapped(object sender, ItemTappedEventArgs e)
+        {
+            if(ChatList.SelectedItem.Matches(typeof(Alice.Models.ChatMessage)))
+            {
+                var data = (Alice.Models.ChatMessage)ChatList.SelectedItem;
+                if(data.AttachImg != null && !string.IsNullOrEmpty(data.AttachImg))
+                {
+                    TargetURL = data.AttachImg;
+                    Navigation.PushModalAsync(new ImageDisplay());
+                }   
+            }
+            
         }
     }
 }

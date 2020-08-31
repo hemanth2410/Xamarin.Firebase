@@ -98,7 +98,7 @@ namespace Alice.Droid.Services
                 .SetVisibility((int)NotificationVisibility.Public)
                 .SetVibrate(new long[0]);
 
-            if (App.IsActive)
+            if (!App.IsActive)
             {
                 var alarmAttributes = new AudioAttributes.Builder().SetContentType(AudioContentType.Sonification).SetUsage(AudioUsageKind.Notification).Build();
                 NotificationManager notificationManager = mContext.GetSystemService(Context.NotificationService) as NotificationManager;
@@ -125,8 +125,6 @@ namespace Alice.Droid.Services
                     notificationManager1.Notify(idPush++, notificationBuilder.Build());
                 }
                 //remove after debug
-                var chatService = ViewModelLocator.Instance.Resolve(typeof(ChatService)) as IChatService;
-                chatService.OnMessageReceived(message);
             }
             else
             {
